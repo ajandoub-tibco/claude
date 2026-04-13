@@ -2,6 +2,24 @@
 
 This repository holds the `CLAUDE.md` instructions and a set of custom slash commands for the EBX Core App project, designed to be used with Claude Code.
 
+## Prerequisites
+
+### Atlassian MCP Server
+
+The `/ebx-support` command requires the Atlassian MCP server. Add it with:
+
+```bash
+claude mcp add --transport http atlassian https://mcp.atlassian.com/v1/mcp
+```
+
+### GitHub CLI
+
+The GitHub MCP server is tricky to set up. Instead, install and authenticate the GitHub CLI (`gh`), which Claude Code can use directly:
+
+```bash
+gh auth login
+```
+
 ## Commands
 
 ### `/ebx-review-before-commit`
